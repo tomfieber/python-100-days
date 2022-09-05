@@ -30,7 +30,8 @@ def calculate_tip():
     bill, tip_pct, number_of_parties = get_values()
     tip_value = bill * tip_pct
     total_bill = bill + tip_value
-    party_split = round((total_bill / number_of_parties), 2)
+    each_bill = total_bill / number_of_parties
+    party_split = "{:.2f}".format(each_bill)
     print(f"Each person should pay ${party_split}")
 
 
